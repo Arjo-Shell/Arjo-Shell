@@ -60,5 +60,6 @@ except Exception as error:
     print("ADDITIONAL INFORMATION:\n>", error)
     exit()
 
+
 if os.name == 'nt':
     os.system(f"attrib +h {expanduser('~')}\{REG_FILENAME}")
