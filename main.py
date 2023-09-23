@@ -2,7 +2,7 @@
 ARJO_REG_DATA = {
     "osName": "ARJO SHELL",
     "osCodename": "CODENAME ARJO SHELL",
-    "version": "0.23.9.23.1",
+    "version": "0.2023.9.23.1",
     "lastStableVersion": "0",
     "yearCreated": "2023",
     "monthCreated": "9",
