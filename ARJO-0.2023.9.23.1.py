@@ -1,12 +1,15 @@
+import os
+from os.path import expanduser
+
 # All registry data
 ARJO_REG_DATA = {
     "osName": "ARJO SHELL",
     "osCodename": "CODENAME ARJO SHELL",
-    "version": "0.2023.9.23.1",
+    "version": "0.2023.9.23.2",
     "lastStableVersion": "0",
     "yearCreated": "2023",
     "monthCreated": "9",
-    "dayCreated": "23.1",
+    "dayCreated": "23.2",
 }
 
 # Name of the registry filename
@@ -18,7 +21,7 @@ print(f"SETUP FOR: {ARJO_REG_DATA['version']}")
 
 #Registry Setup
 try:
-    with open(REG_FILENAME, 'w') as ARJO_REGISTRY:
+    with open(f"{expanduser('~')}\{REG_FILENAME}", 'w') as ARJO_REGISTRY:
         for i in ARJO_REG_DATA:
             ARJO_REGISTRY.write(ARJO_REG_DATA[i])
             ARJO_REGISTRY.write("\n")
@@ -31,7 +34,7 @@ except Exception as error:
 #Arjo Setup (REGISTRY)
 try:
     registry_bind = []
-    with open(REG_FILENAME, 'r') as ARJO_REGISTRY:
+    with open(f"{expanduser('~')}\{REG_FILENAME}", 'r') as ARJO_REGISTRY:
         with open("ARJO.py", 'w') as ARJO:
             for i in ARJO_REGISTRY:
                 i = list(i)
@@ -56,3 +59,6 @@ except Exception as error:
     print("FATAL ERROR - REGISTRY BINDING ERROR (0x002)")
     print("ADDITIONAL INFORMATION:\n>", error)
     exit()
+
+if os.name == 'nt':
+    os.system(f"attrib +h {expanduser('~')}\{REG_FILENAME}")
