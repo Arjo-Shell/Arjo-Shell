@@ -2,11 +2,11 @@
 ARJO_REG_DATA = {
     "osName": "ARJO SHELL",
     "osCodename": "CODENAME ARJO SHELL",
-    "version": "0.23.9.24",
+    "version": "0.23.9.23",
     "lastStableVersion": "0",
     "yearCreated": "2023",
     "monthCreated": "9",
-    "dayCreated": "24",
+    "dayCreated": "23",
 }
 
 # Name of the registry filename
