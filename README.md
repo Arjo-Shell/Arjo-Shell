@@ -1,2 +1,3 @@
 # Arjo-Shell
-![Arjo Shell Changelog](https://github.com/Arjo-Shell/Arjo-Shell/assets/122167559/3a5aba3c-e79d-4705-9202-4a9d533e5864)
+![image](https://github.com/Arjo-Shell/Arjo-Shell/assets/122167559/71780fa5-3589-47ac-b209-dffeabaa2f70)
+
