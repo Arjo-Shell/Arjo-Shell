@@ -86,9 +86,12 @@ try:
         ARJO.write("                if filter in ARJO_REG_DATA:\n")
         ARJO.write("                    print(ARJO_REG_DATA[filter])\n")
         ARJO.write("            elif subcommand == 'save':\n")
+        ARJO.write(f"                os.remove('{REG_FILENAME}'\n")
         ARJO.write(f"                with open('{REG_FILENAME}', 'w') as EXTERNAL_REGISTRY:\n")
         ARJO.write(f"                    for i in ARJO_REG_DATA:\n")
         ARJO.write(f"                        EXTERNAL_REGISTRY.write(i)\n")
+        ARJO.write(f"                    if os.name == 'nt':\n"
+        ARJO.write(f"                        os.system(f'attrib +h {REG_FILENAME}')\n"
         ARJO.write("            elif subcommand == 'edit':\n")
         ARJO.write("                filter = input('Insert Registry Object to Edit: ')\n")
         ARJO.write("                if filter in ARJO_REG_DATA:\n")
