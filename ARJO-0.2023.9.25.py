@@ -3,12 +3,12 @@ import os
 # All registry data
 ARJO_REG_DATA = {
     "osName": "ARJO SHELL",
-    "osCodename": "CODENAME ARJO SHELL",
-    "version": "0.2023.9.25",
+    "osCodename": "APPLESEED",
+    "version": "0.2023.9.27",
     "lastStableVersion": "0",
     "yearCreated": "2023",
     "monthCreated": "9",
-    "dayCreated": "25",
+    "dayCreated": "27",
 }
 
 #Creating the File
@@ -85,6 +85,16 @@ try:
         ARJO.write("                filter = input('Insert Registry Object: ')\n")
         ARJO.write("                if filter in ARJO_REG_DATA:\n")
         ARJO.write("                    print(ARJO_REG_DATA[filter])\n")
+        ARJO.write("            elif subcommand == 'save':\n")
+        ARJO.write(f"                with open({REG_FILENAME}, 'w') as EXTERNAL_REGISTRY:\n")
+        ARJO.write(f"                    for i in ARJO_REG_DATA:\n")
+        ARJO.write(f"                        EXTERNAL_REGISTRY.write(i)\n")
+        ARJO.write("            elif subcommand == 'edit':\n")
+        ARJO.write("                filter = input('Insert Registry Object to Edit: ')\n")
+        ARJO.write("                if filter in ARJO_REG_DATA:\n")
+        ARJO.write("                    for i in ARJO_REG_DATA:\n")
+        ARJO.write("                        if i == filter:\n")
+        ARJO.write("                            ARJO_REG_DATA[i] = input('Insert New Data: ')\n")
 except Exception as error:
     print("\nUNKNOWN ERROR")
     print("INFORMATION:\n", error)
