@@ -4,11 +4,11 @@ import os
 ARJO_REG_DATA = {
     "osName": "ARJO SHELL",
     "osCodename": "APPLESEED",
-    "version": "0.2023.9.27",
+    "version": "0.2023.9.27.2",
     "lastStableVersion": "0",
     "yearCreated": "2023",
     "monthCreated": "9",
-    "dayCreated": "27",
+    "dayCreated": "27.2",
 }
 
 #Creating the File
